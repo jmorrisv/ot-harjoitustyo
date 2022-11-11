@@ -43,12 +43,33 @@ class TestKassapaate(unittest.TestCase):
     def test_edullinen_kortilla_tarpeeksi_rahaa(self):
         self.assertEqual(self.kassapaate.syo_edullisesti_kortilla(self.maksukortti), True)
 
+    def test_edullinen_kortin_saldo_ei_riita(self):
+        maksukortti = Maksukortti(200)
+        self.assertEqual(self.kassapaate.syo_edullisesti_kortilla(maksukortti), False)
+
     def test_edullinen_korttiosto_toimii(self):
         self.kassapaate.syo_edullisesti_kortilla(self.maksukortti)
         self.assertEqual(self.kassapaate.edulliset, 1)
         self.assertEqual(str(self.maksukortti), "Kortilla on rahaa 7.60 euroa")
 
+    def test_maukas_kortilla_tarpeeksi_rahaa(self):
+        self.assertEqual(self.kassapaate.syo_maukkaasti_kortilla(self.maksukortti), True)
+    
+    def test_maukas_kortin_saldo_ei_riita(self):
+        maksukortti = Maksukortti(200)
+        self.assertEqual(self.kassapaate.syo_maukkaasti_kortilla(maksukortti), False)
+
     def test_maukas_korttiosto_toimii(self):
         self.kassapaate.syo_maukkaasti_kortilla(self.maksukortti)
         self.assertEqual(self.kassapaate.maukkaat, 1)
         self.assertEqual(str(self.maksukortti), "Kortilla on rahaa 6.00 euroa")
+
+    def test_kortin_lataus_toimii(self):
+        self.kassapaate.lataa_rahaa_kortille(self.maksukortti, 1000)
+        self.assertEqual(str(self.maksukortti), "Kortilla on rahaa 20.00 euroa")
+        self.assertEqual(self.kassapaate.kassassa_rahaa, 101000)
+
+    def test_kortin_lataus_ei_toimi_varastamalla(self):
+        self.kassapaate.lataa_rahaa_kortille(self.maksukortti, -1)
+        self.assertEqual(str(self.maksukortti), "Kortilla on rahaa 10.00 euroa")
+        self.assertEqual(self.kassapaate.kassassa_rahaa, 100000)
