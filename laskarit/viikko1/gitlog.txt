@@ -1,0 +1,93 @@
+commit 991833b02601fa1bfdcd2c2ef1c4bda4e948dfef
+Author: Morris Viitanen <morris.viitanen@helsinki.fi> 
+Date:   Fri Nov 4 13:00:13 2022 +0200
+Poistettu file1
+tiedostoja/file1.txt | 0
+1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 795b81b621c22e4b5f3790fa8e4a8b6ba505801e
+Author: Morris Viitanen <morris.viitanen@helsinki.fi>
+Date:   Fri Nov 4 12:59:32 2022 +0200
+Nimetty uudelleen
+tiedostoja/{file2.txt => file22.txt} | 0
+1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit ee5ece0dbfb4d4a211113684be258411f5703fee
+Author: Morris Viitanen <morris.viitanen@helsinki.fi>
+Date:   Fri Nov 4 12:50:06 2022 +0200                                                                                                                                     
+Lisätty tiedostoja-hakemisto                                                                                                                                       
+tiedostoja/file1.txt | 0                                                           
+tiedostoja/file2.txt | 0                                                           
+tiedostoja/file3.txt | 0                                                           
+3 files changed, 0 insertions(+), 0 deletions(-) 
+
+commit 025d6f6b596f09823f919589a03e8a10c7ed4085                                    
+Author: Morris Viitanen <morris.viitanen@helsinki.fi>                              
+Date:   Fri Nov 4 12:44:13 2022 +0200                                                                                                                                     
+Muutettu tiedostoja eka.txt ja kolmas.txt                                                                                                                          
+eka.txt    | 1 +                                                                   
+kolmas.txt | 2 +-                                                                  
+2 files changed, 2 insertions(+), 1 deletion(-) 
+
+commit 8175401a94dbbb2ab76d7085a04f1afd84d8c04a                                    
+Author: Morris Viitanen <morris.viitanen@helsinki.fi>                              
+Date:   Fri Nov 4 12:39:41 2022 +0200                                                                                                                                     
+poistettu vanha                                                                                                                                                    
+tiedosto.txt | 1 -                                                                 
+1 file changed, 1 deletion(-) 
+
+commit 6300c04db5da1d45ca9c4a77935339ceaaae08ea                                    
+Author: Morris Viitanen <morris.viitanen@helsinki.fi>                              
+Date:   Fri Nov 4 12:37:59 2022 +0200                                                                                                                                     
+Muutettu nimi                                                                                                                                                      
+eka.txt | 1 +                                                                      
+1 file changed, 1 insertion(+) 
+
+commit ec2e8e1e29fffd68592f8b8f610056a594423096                                    
+Author: Morris Viitanen <morris.viitanen@helsinki.fi>                              
+Date:   Fri Nov 4 12:36:12 2022 +0200                                                                                                                                     
+Muutos                                                                                                                                                             
+kolmas.txt          | 0                                                            
+stuff/kokoukset.txt | 0                                                            
+tiedosto.txt        | 0                                                            
+toinen.txt          | 1 -                                                          
+4 files changed, 1 deletion(-) 
+
+commit ac83163c8ec5860109102704aa9fd5a30546ef11                                    
+Author: Morris Viitanen <morris.viitanen@helsinki.fi>                              
+Date:   Fri Nov 4 11:14:02 2022 +0200                                                                                                                                     
+lisätty hakemisto stuff                                                                                                                                            
+stuff/kokoukset.txt | 0                                                            
+1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 514f0e038863c824e05797f5d34f55ef7912b777                                    
+Author: Morris Viitanen <morris.viitanen@helsinki.fi>                              
+Date:   Fri Nov 4 11:11:31 2022 +0200                                                                                                                                     
+muutokset tiedostoihin toinen.txt ja kolmas.txt                                                                                                                    
+kolmas.txt | 1 +                                                                   
+toinen.txt | 1 +                                                                   
+2 files changed, 2 insertions(+) 
+
+commit 061dc5e77beac2e3f662875b1216455b872e8367                                    
+Author: Morris Viitanen <morris.viitanen@helsinki.fi>                              
+Date:   Fri Nov 4 11:08:33 2022 +0200                                                                                                                                     
+kolmas.txt luotu                                                                                                                                                   
+kolmas.txt | 0                                                                     
+1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit aa1888e73551053b530ae39df626929050e121f9                                    
+Author: Morris Viitanen <morris.viitanen@helsinki.fi>                              
+Date:   Fri Nov 4 11:04:03 2022 +0200                                                                                                                                     
+muutos ja lisäys                                                                                                                                                   
+tiedosto.txt | 1 +                                                                 
+toinen.txt   | 0                                                                   
+2 files changed, 1 insertion(+) 
+
+commit 717338697c0cddd12c654d880fd719c6f4d45416                                    
+Author: Morris Viitanen <morris.viitanen@helsinki.fi>                              
+Date:   Fri Nov 4 11:00:10 2022 +0200                                                                                                                                     
+tiedosto.txt luotu                                                                                                                                                 
+tiedosto.txt | 0                                                                   
+1 file changed, 0 insertions(+), 0 deletions(-) 
+
+pieni muutos vain
