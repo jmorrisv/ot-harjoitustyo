@@ -7,26 +7,31 @@ FuelTank ->> tank: 40
 FuelTank -->>- car: 
 car ->> engine: Engine()
 car -->>- Main: 
-Main ->>+ Machine: start_driving()
-Machine ->>+ engine: drive()
-engine ->> Engine: car._engine.start()
+Main ->> Machine: drive()
+activate Machine
+Machine ->> Engine: start()
 activate Engine
 Engine ->>+ FuelTank: start()
 deactivate Engine
 activate FuelTank
 FuelTank ->> tank: consume(5)
-FuelTank -->> engine: 
+FuelTank -->> Machine: 
 deactivate FuelTank
-engine ->> Engine: car._engine.is_running()
+Machine ->> Engine: is_running()
 activate Engine
-Engine ->>+ tank: is_running()
+Engine ->> tank: is_running()
 deactivate Engine
-tank -->>- engine: True
-engine ->>- Engine: car._engine.use_energy()
+activate tank
+tank -->> Machine: True
+deactivate tank
+Machine ->> Engine: use_energy()
 activate Engine
-Engine ->>+ FuelTank: use_energy()
+Engine ->> FuelTank: use_energy()
 deactivate Engine
+activate FuelTank
 FuelTank ->> tank: consume(10)
-FuelTank -->>- Machine: 
-Machine -->>- Main: 
+FuelTank -->> Machine: 
+deactivate FuelTank
+Machine -->> Main: 
+deactivate Machine
 ```
