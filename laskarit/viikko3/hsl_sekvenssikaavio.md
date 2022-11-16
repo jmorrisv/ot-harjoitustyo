@@ -5,8 +5,20 @@ main ->> rautatietori: Lataajalaite()
 main ->> ratikka6: Lukijalaite()
 main ->> bussi244: Lukijalaite()
 main ->> laitehallinto: lisaa_lataaja(rautatietori)
+activate laitehallinto
+laitehallinto ->> rautatietori: append()
+laitehallinto -->> main: 
+deactivate laitehallinto
 main ->> laitehallinto: lisaa_lukija(ratikka6)
+activate laitehallinto
+laitehallinto ->> ratikka6: append()
+laitehallinto -->> main: 
+deactivate laitehallinto
 main ->> laitehallinto: lisaa_lukija(bussi244)
+activate laitehallinto
+laitehallinto ->> bussi244: append()
+laitehallinto -->> main: 
+deactivate laitehallinto
 main ->> lippu_luukku: Kioski()
 main ->> lippu_luukku: osta_matkakortti("Kalle")
 activate lippu_luukku
