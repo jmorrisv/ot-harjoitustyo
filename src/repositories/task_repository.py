@@ -38,6 +38,27 @@ class TaskRepository:
                 
         return tasks
 
+    def create(self, task):
+        """Tallentaa uuden Taskin tiedostoon.
+
+        Args:
+            task: Tallennettava kohde Task-oliona.
+
+        Returns:
+            Tallennettu kohde Task-oliona.
+        """
+
+        tasks = self.read()
+        tasks.append(task)
+        self._write(tasks)
+        return task
+
+    def _write(self, tasks):
+        with open(self._file_path, "w") as file:
+            for task in tasks:
+                row = f"{task.id};{task.name}"
+                file.write(row+"\n")
+
 
 task_repository = TaskRepository(data_file_path)
         
