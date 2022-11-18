@@ -1,5 +1,4 @@
 import uuid
-from datetime import datetime
 
 class Task:
     """Siivottavaa kohdetta kuvaava luokka
@@ -41,4 +40,3 @@ class Task:
         self.frequency_m = frequency_m
         self.dirty = dirty
         self.task_id = task_id or str(uuid.uuid4())
-        self.frequency = datetime
