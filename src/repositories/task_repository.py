@@ -1,5 +1,8 @@
 import os
 
+dirname = os.path.dirname(__file__)
+data_file_path = os.path.join(dirname, "data.csv")
+
 class TaskRepository:
 
     """Luokka joka vastaa tiedon tallentamisesta tietokantaan ja sen hakemisesta."""
@@ -14,7 +17,7 @@ class TaskRepository:
 
         self._file_path = file_path
 
-    def _read(self):
+    def read(self):
 
         """"Lukee Taskit tiedostosta listaksi.
         Returns:
@@ -36,5 +39,5 @@ class TaskRepository:
         return tasks
 
 
-
+task_repository = TaskRepository(data_file_path)
         
