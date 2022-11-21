@@ -1,70 +1,50 @@
-import os
-from pathlib import Path
-
-dirname = os.path.dirname(__file__)
-data_file_path = os.path.join(dirname, "data.csv")
+from config import TASKS_FILE_PATH
+from task import Task
+import csv
+import datetime
 
 class TaskRepository:
 
-    """Luokka joka vastaa tiedon tallentamisesta tietokantaan ja sen hakemisesta."""
+    def __init__(self, file_path=TASKS_FILE_PATH):
 
-    def __init__(self, file_path):
-
-        """Luokan konstruktori.
-        
-        Args:
-            file_path: Polku tiedostoon, johon luodut Taskit tallennetaan.
-        """
+        '''Luokka, joka lukee tietoa tietokannasta
+        ja tallentaa tietoa tietokantaan.'''
 
         self._file_path = file_path
+        
+    def fetch_task_list(self):
 
-    def read(self):
-
-        """"Lukee Taskit tiedostosta listaksi.
-        Returns:
-            Palauttaa Task-olioita sisältävän listan.
-        """
+        "Palauttaa kaikki tehtävät listana"
 
         tasks = []
 
         with open(self._file_path) as file:
-            for row in file:
-                row = row.replace("\n", "")
-                parts = row.split(";")
+            csv_reader = csv.Reader(file, delimiter=',')
 
-                task_id = parts[0]
-                name = parts[1]
-            
-                tasks.append(name, task_id)
+            for row in csv_reader:
+                name = row[0]
+                freq_h = int(row[1])
+                freq_m = int(row[2])
+                freq_s = int(row[3])
+                frequency = datetime.time(freq_h,freq_m,freq_s)
                 
+                task = Task(name, frequency)
+                tasks.append(task)
+
         return tasks
 
-    def create(self, task):
-        """Tallentaa uuden Taskin tiedostoon.
+    def write_new_task(self, task):
 
+        '''Lisää uuden tehtävän tietokantaan.
+        
         Args:
-            task: Tallennettava kohde Task-oliona.
+            task: Task-olio'''
 
-        Returns:
-            Tallennettu kohde Task-oliona.
-        """
-
-        tasks = self.read()
+        tasks = self.fetch_task_list()
         tasks.append(task)
-        self._write(tasks)
-        return task
 
-    def _ensure_file_exists():
-        Path(self._file_path).touch()
+        with open(self._file_path) as file:
+            csv_writer = csv.writer(file)
 
-    def _write(self, tasks):
-        self._ensure_file_exists()
-        
-        with open(self._file_path, "w") as file:
             for task in tasks:
-                row = f"{task.id};{task.name}"
-                file.write(row+"\n")
-
-
-task_repository = TaskRepository(data_file_path)
-        
+                csv_writer.writerow(task)

@@ -9,3 +9,4 @@ except FileNotFoundError:
     pass
 
 TASKS_FILENAME = os.getenv("TASKS_FILENAME") or "Tasks.csv"
+TASKS_FILE_PATH = os.path.join(dirname, "..", "data", TASKS_FILENAME)
