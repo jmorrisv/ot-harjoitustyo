@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 
 dirname = os.path.dirname(__file__)
 data_file_path = os.path.join(dirname, "data.csv")
@@ -53,7 +54,12 @@ class TaskRepository:
         self._write(tasks)
         return task
 
+    def _ensure_file_exists():
+        Path(self._file_path).touch()
+
     def _write(self, tasks):
+        self._ensure_file_exists()
+        
         with open(self._file_path, "w") as file:
             for task in tasks:
                 row = f"{task.id};{task.name}"
