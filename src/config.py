@@ -8,5 +8,7 @@ try:
 except FileNotFoundError:
     pass
 
-TASKS_FILENAME = os.getenv("TASKS_FILENAME") or "Tasks.csv"
-TASKS_FILE_PATH = os.path.join(dirname, "..", "data", TASKS_FILENAME)
+TASKS = os.getenv("TASKS_FILENAME") or "tasks.csv"
+TASKS_FILE_PATH = os.path.join(dirname, "..", "data", TASKS)
+
+DATABASE_FILENAME = os.getenv("DATABASE_FILENAME") or "data.sqlite"

@@ -6,7 +6,7 @@ def drop_table(connection):
 
     cursor = connection.cursor()
 
-    cursor.execute('''drop table if exists tasks;''')
+    cursor.execute('''drop table if exists tasks''')
     connection.commit()
 
 def create_table(connection):
@@ -20,8 +20,9 @@ def create_table(connection):
                     name text primary key,
                     frequency_d integer,
                     frequency_h integer,
-                    frequency_m integer
-                    );
+                    frequency_m integer,
+                    frequency_s integer
+                    )
                 ''')
         
     connection.commit()

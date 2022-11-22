@@ -1,13 +1,14 @@
 import unittest
-from repositories.task_repository import task_repository
+from repositories.task_repository import TaskRepository
 from entities.task import Task
 
 class TestTaskRepository(unittest.TestCase):
     def setUp(self) -> None:
-        self.task1 = Task("test 1")
+        self.task_repository = TaskRepository
+        self.task = Task("Tehtävä", 0, 0, 0, 30)
 
     def test_create(self):
-        task_repository.create(self.task1)
-        tasks = task_repository.read()
+        self.task_repository.write_new_task(self.task)
+        tasks = self.task_repository.read()
 
         self.assertEqual(len(tasks), 1)

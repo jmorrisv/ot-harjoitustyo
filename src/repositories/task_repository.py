@@ -23,22 +23,20 @@ class TaskRepository:
 
             for row in csv_reader:
                 name = row[0]
-                freq_h = int(row[1])
-                freq_m = int(row[2])
-                freq_s = int(row[3])
-                frequency = datetime.time(freq_h,freq_m,freq_s)
+                freq_d = int(row[1])
+                freq_h = int(row[2])
+                freq_m = int(row[3])
+                freq_s = int(row[4])
+                frequency = datetime.timedelta(days = freq_d, hours = freq_h, minutes = freq_m, seconds = freq_s)
                 
                 task = Task(name, frequency)
                 tasks.append(task)
 
         return tasks
 
-    def write_new_task(self, task):
+    def write_new_task(self, task: Task):
 
-        '''Lisää uuden tehtävän tietokantaan.
-        
-        Args:
-            task: Task-olio'''
+        '''Lisää uuden tehtävän tietokantaan.'''
 
         tasks = self.fetch_task_list()
         tasks.append(task)
