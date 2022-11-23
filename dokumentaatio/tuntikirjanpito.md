@@ -5,3 +5,4 @@ Päivä | Tunnit | Mitä tein
 18.11. | 3 | Yritin saada Tkinterin toimimaan, aloitin kirjoittamaan Taskeja tallentavaa luokkaa ja ensimmäistä testiä
 21.11. | 3 | Menin pyytämään apua ja aloitin alusta. Tein tietokannan alustavat tiedostot sekä tietokantaa lukevan ja tallentavan luokan
 22.11. | 3 | Sain tehtyä harjoitustyön tehtävät kolmanteen asti. Yritin suorittaa testiä, mutta se ei onnistunut emmekä saaneet ongelmaa ratkaistua
+23.11. | 2 | Koitettiin ratkoa ongelmia tietokannan luomisessa.
