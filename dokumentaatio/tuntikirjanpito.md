@@ -6,4 +6,4 @@ Päivä | Tunnit | Mitä tein
 21.11. | 3 | Menin pyytämään apua ja aloitin alusta. Tein tietokannan alustavat tiedostot sekä tietokantaa lukevan ja tallentavan luokan
 22.11. | 3 | Sain tehtyä harjoitustyön tehtävät kolmanteen asti. Yritin suorittaa testiä, mutta se ei onnistunut emmekä saaneet ongelmaa ratkaistua
 23.11. | 2 | Koitettiin ratkoa ongelmia tietokannan luomisessa.
-25.11. | 3 | Sain luokat ja testin toimimaan.
+25.11. | 4 | Sain luokat ja testin jotenkin toimimaan. Tein invoke-komennot ja päivitin README-tiedoston.
