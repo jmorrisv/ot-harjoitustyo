@@ -1,1 +1,4 @@
-- TaskRepository-luokka huolehtii tietokantaoperaatioista. Testettu että sen avulla pystyy tallantamaan Taskeja. Lisätty myös Task-luokka.
+## Viikko 4
+- TaskRepository-luokka tehty joka huolehtii tietokantaoperaatioista.
+- Testettu että sen avulla pystyy tallentamaan Taskeja.
+- Lisätty myös Task-luokka.
