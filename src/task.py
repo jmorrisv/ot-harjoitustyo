@@ -8,3 +8,6 @@ class Task:
 
         self.name = name
         self.frequency = frequency
+
+    def __str__(self) -> str:
+        return f"name: {self.name}, seconds: {self.frequency.seconds}"

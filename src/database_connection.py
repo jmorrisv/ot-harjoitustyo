@@ -1,12 +1,13 @@
 import os
 import sqlite3
-from config import DATABASE_FILENAME
+
+DATABASE_FILENAME =  "data.sqlite"
 
 dirname = os.path.dirname(__file__)
 
-print(os.path.join(dirname, "..", "data", DATABASE_FILENAME))
+DATABASE_FILE_PATH = os.path.join(dirname, DATABASE_FILENAME)
 
-connection = sqlite3.connect(os.path.join(dirname, "..", "data", DATABASE_FILENAME))
+connection = sqlite3.connect(DATABASE_FILE_PATH)
 connection.row_factory = sqlite3.Row
 
 def get_database_connection():
