@@ -14,14 +14,20 @@ Sovellus auttaa käyttäjäänsä pitämään kotinsa siistinä. Sovelluksen lis
 
 Ohjelma käynnistyy komennolla:
 
-'''poetry run invoke start'''
+```
+poetry run invoke start
+```
 
 Voit suorittaa testit komennolla:
 
-'''poetry run invoke test'''
+```
+poetry run invoke test
+```
 
 Saat testikattavuusraportin komennolla:
 
-'''poetry run invoke coverage-report'''
+```
+poetry run invoke coverage-report
+```
 
 Löydät tämän jälkeen raportin syntyneestä htmlcov-hakemistosta.
