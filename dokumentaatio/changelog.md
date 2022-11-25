@@ -1,0 +1,1 @@
+- TaskRepository-luokka huolehtii tietokantaoperaatioista. Testettu että sen avulla pystyy tallantamaan Taskeja. Lisätty myös Task-luokka.
