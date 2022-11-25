@@ -13,3 +13,5 @@
 [vaatimusmaarittely.md](https://github.com/jmorrisv/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
 
 [tuntikirjanpito.md](https://github.com/jmorrisv/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
+
+[changelog](https://github.com/jmorrisv/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)
