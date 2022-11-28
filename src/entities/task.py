@@ -11,3 +11,4 @@ class Task:
 
     def __str__(self) -> str:
         return f"name: {self.name}, seconds: {self.frequency.seconds}"
+        

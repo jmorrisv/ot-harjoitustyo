@@ -21,7 +21,7 @@ def create_table(connection):
                     frequency_s integer
                     )
                 ''')
-        
+
     connection.commit()
 
 def initialize_db():
@@ -29,7 +29,7 @@ def initialize_db():
     '''Alustaa tietokantataulun.'''
 
     connection = get_database_connection()
-    
+
     drop_table(connection)
     create_table(connection)
 

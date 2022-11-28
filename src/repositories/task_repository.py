@@ -1,19 +1,18 @@
-from task import Task
-import database_connection
 import datetime
-import initialize_db
+from entities.task import Task
+import database_connection
 
-connection = database_connection.get_database_connection()
+conn = database_connection.get_database_connection()
 
 class TaskRepository:
 
-    def __init__(self, connection=connection):
+    def __init__(self, connection=conn):
 
         '''Luokka, joka lukee tietoa tietokannasta
         ja tallentaa tietoa tietokantaan.'''
 
         self.connection = connection
-        
+
 
     def write_new_task(self, task: Task):
 
@@ -40,15 +39,9 @@ class TaskRepository:
             print(name)
             freq_s = float(row[1])
             print(freq_s)
-            
-            task = Task(name, datetime.timedelta(days=freq_s))
+
+            task = Task(name, datetime.timedelta(seconds=freq_s))
             tasks.append(task)
             print(str(task))
 
         return tasks
-
-task_repository = TaskRepository()
-initialize_db.initialize_db()
-task = Task("hello world", datetime.timedelta(seconds=100))
-task_repository.write_new_task(task)
-print(task_repository.fetch_all_tasks_in_list())

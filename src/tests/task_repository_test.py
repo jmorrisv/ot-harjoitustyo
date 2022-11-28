@@ -1,6 +1,6 @@
 import unittest
-from task_repository import TaskRepository
-from task import Task
+from repositories.task_repository import TaskRepository
+from entities.task import Task
 from datetime import timedelta
 import initialize_db
 
