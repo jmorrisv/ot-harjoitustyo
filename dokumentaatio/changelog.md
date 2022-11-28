@@ -1,4 +1,8 @@
-## Viikko 4
+## Viikko 3
+- Lisätty Task-luokka, joka kuvaa tehtävää.
 - TaskRepository-luokka tehty joka huolehtii tietokantaoperaatioista.
-- Testettu että sen avulla pystyy tallentamaan Taskeja.
-- Lisätty myös Task-luokka.
+- Testattu että näiden luokkien avulla ohjelma pystyy tallentamaan tehtäviä tietokantaan.
+
+## Viikko 4
+- Korjattu ongelmat tiedostorakenteessa.
+- Käyttäjä pystyy tarkastelemaan tehtävälistaa, eli näkee ohjelman käynnistyessä kunkin tehtävän nimen ja toistuvuuden sekunneissa.
