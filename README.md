@@ -10,7 +10,21 @@ Sovellus auttaa käyttäjäänsä pitämään kotinsa siistinä. Sovelluksen lis
 
 - [Changelog](https://github.com/jmorrisv/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)
 
-## Komennot
+## Asennus
+
+Asenna riippuvuudet komennolla:
+
+```
+poetry install
+```
+
+Alusta ohjelma komennolla:
+
+```
+poetry run invoke build
+```
+
+## Komentorivikomennot
 
 Ohjelma käynnistyy komennolla:
 
