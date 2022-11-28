@@ -6,4 +6,7 @@ Päivä | Tunnit | Mitä tein
 21.11. | 3 | Menin pyytämään apua ja aloitin alusta. Tein tietokannan alustavat tiedostot sekä tietokantaa lukevan ja tallentavan luokan
 22.11. | 3 | Sain tehtyä harjoitustyön tehtävät kolmanteen asti. Yritin suorittaa testiä, mutta se ei onnistunut emmekä saaneet ongelmaa ratkaistua
 23.11. | 2 | Koitettiin ratkoa ongelmia tietokannan luomisessa.
-25.11. | 4 | Sain luokat ja testin jotenkin toimimaan. Tein invoke-komennot ja päivitin README-tiedoston.
+25.11. | 4 | Sain luokat ja testin jotenkin toimimaan ottamalla kaikki tiedostot src-kansioon. Tein invoke-komennot ja päivitin README-tiedoston.
+28.11. | 2 | Ongelma ratkesi. Tein index.py-tiedoston ja pystyin siirtämään tiedostot takaisin kansioihin. Otin pylintin käyttöön ja korjasin koodin virheet.
+
+Yhteensä 20 h
