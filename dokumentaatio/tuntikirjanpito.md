@@ -8,6 +8,6 @@ Päivä | Tunnit | Mitä tein
 23.11. | 2 | Koitettiin ratkoa ongelmia tietokannan luomisessa.
 25.11. | 4 | Sain luokat ja testin jotenkin toimimaan ottamalla kaikki tiedostot src-kansioon. Tein invoke-komennot ja päivitin README-tiedoston.
 28.11. | 3 | Ongelma ratkesi. Tein index.py-tiedoston ja pystyin siirtämään tiedostot takaisin kansioihin. Otin pylintin käyttöön ja korjasin koodin virheet. Aloitin pakkauskaavion tekemisen.
-29.11. | 0,5 | Tein pakkauskaavion loppuun ja päivitin dokumentaation GitHubiin.
+29.11. | 3 | Tein pakkauskaavion loppuun ja päivitin dokumentaation GitHubiin. Aloin testailla ajastimen tekemistä.
 
-Yhteensä 21,5 h
+Yhteensä 23,5 h
