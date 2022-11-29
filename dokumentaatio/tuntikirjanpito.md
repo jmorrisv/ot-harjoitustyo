@@ -7,6 +7,7 @@ Päivä | Tunnit | Mitä tein
 22.11. | 3 | Sain tehtyä harjoitustyön tehtävät kolmanteen asti. Yritin suorittaa testiä, mutta se ei onnistunut emmekä saaneet ongelmaa ratkaistua
 23.11. | 2 | Koitettiin ratkoa ongelmia tietokannan luomisessa.
 25.11. | 4 | Sain luokat ja testin jotenkin toimimaan ottamalla kaikki tiedostot src-kansioon. Tein invoke-komennot ja päivitin README-tiedoston.
-28.11. | 2 | Ongelma ratkesi. Tein index.py-tiedoston ja pystyin siirtämään tiedostot takaisin kansioihin. Otin pylintin käyttöön ja korjasin koodin virheet.
+28.11. | 3 | Ongelma ratkesi. Tein index.py-tiedoston ja pystyin siirtämään tiedostot takaisin kansioihin. Otin pylintin käyttöön ja korjasin koodin virheet. Aloitin pakkauskaavion tekemisen.
+29.11. | 0,5 | Tein pakkauskaavion loppuun ja päivitin dokumentaation GitHubiin.
 
 Yhteensä 20 h
