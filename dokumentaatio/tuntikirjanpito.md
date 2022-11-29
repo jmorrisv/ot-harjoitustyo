@@ -10,4 +10,4 @@ Päivä | Tunnit | Mitä tein
 28.11. | 3 | Ongelma ratkesi. Tein index.py-tiedoston ja pystyin siirtämään tiedostot takaisin kansioihin. Otin pylintin käyttöön ja korjasin koodin virheet. Aloitin pakkauskaavion tekemisen.
 29.11. | 0,5 | Tein pakkauskaavion loppuun ja päivitin dokumentaation GitHubiin.
 
-Yhteensä 20 h
+Yhteensä 21,5 h
