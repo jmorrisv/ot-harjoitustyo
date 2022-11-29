@@ -53,3 +53,5 @@ Pylint-tarkistukset voi tehdä komennolla:
 ```
 poetry run invoke lint
 ```
+
+Pylint suorittaa tarkistuksen [tämän](https://github.com/jmorrisv/ot-harjoitustyo/blob/main/.pylintrc) tiedoston mukaisesti.
