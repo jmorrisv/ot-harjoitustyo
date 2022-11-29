@@ -47,3 +47,9 @@ poetry run invoke coverage-report
 ```
 
 Löydät tämän jälkeen raportin syntyneestä htmlcov-hakemistosta.
+
+Pylint-tarkistukset voi tehdä komennolla:
+
+```
+poetry run invoke lint
+```
