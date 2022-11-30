@@ -9,5 +9,6 @@ Päivä | Tunnit | Mitä tein
 25.11. | 4 | Sain luokat ja testin jotenkin toimimaan ottamalla kaikki tiedostot src-kansioon. Tein invoke-komennot ja päivitin README-tiedoston.
 28.11. | 3 | Ongelma ratkesi. Tein index.py-tiedoston ja pystyin siirtämään tiedostot takaisin kansioihin. Otin pylintin käyttöön ja korjasin koodin virheet. Aloitin pakkauskaavion tekemisen.
 29.11. | 3 | Tein pakkauskaavion loppuun ja päivitin dokumentaation GitHubiin. Aloin testailla ajastimen tekemistä.
+30.11. | 1 | Tein luokan ajastimelle ja aloin liittää sitä sovelluksen muihin osiin.
 
-Yhteensä 23,5 h
+Yhteensä 24,5 h
