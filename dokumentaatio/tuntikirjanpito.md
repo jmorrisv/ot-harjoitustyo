@@ -10,5 +10,6 @@ Päivä | Tunnit | Mitä tein
 28.11. | 3 | Ongelma ratkesi. Tein index.py-tiedoston ja pystyin siirtämään tiedostot takaisin kansioihin. Otin pylintin käyttöön ja korjasin koodin virheet. Aloitin pakkauskaavion tekemisen.
 29.11. | 3 | Tein pakkauskaavion loppuun ja päivitin dokumentaation GitHubiin. Aloin testailla ajastimen tekemistä.
 30.11. | 1 | Tein luokan ajastimelle ja aloin liittää sitä sovelluksen muihin osiin.
+1.12. | 0,25 | Tein ajastimelle kaksi ensimmäistä testiä.
 
 Yhteensä 24,5 h
