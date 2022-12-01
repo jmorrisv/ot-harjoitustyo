@@ -12,4 +12,4 @@ Päivä | Tunnit | Mitä tein
 30.11. | 1 | Tein luokan ajastimelle ja aloin liittää sitä sovelluksen muihin osiin.
 1.12. | 0,25 | Tein ajastimelle kaksi ensimmäistä testiä.
 
-Yhteensä 24,5 h
+Yhteensä 24,75 h
