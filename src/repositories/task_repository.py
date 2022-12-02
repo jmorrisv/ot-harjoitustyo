@@ -97,4 +97,4 @@ class TaskRepository:
         '''Poistaa tehtävän tietokannasta'''
 
         cursor = self.connection.cursor()
-        cursor.execute("DELETE FROM tasks WHERE name = ?", (task_name))
+        cursor.execute("DELETE FROM tasks WHERE name = ?", (task_name, ))
