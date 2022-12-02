@@ -18,7 +18,8 @@ def create_table(connection):
     cursor.execute('''
                 CREATE TABLE tasks(
                     name text primary key,
-                    frequency_s integer
+                    frequency_s integer,
+                    end_time text
                     )
                 ''')
 

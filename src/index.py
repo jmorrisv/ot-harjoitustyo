@@ -1,15 +1,38 @@
-from datetime import timedelta
-from entities.task import Task
-from repositories.task_repository import TaskRepository
+from services.services import Services
 
 def main():
 
     '''Suorittaa ohjelman'''
 
-    task_repository = TaskRepository()
-    task = Task("hello world", timedelta(seconds=100))
-    task_repository.write_new_task(task)
-    print(task_repository.fetch_all_tasks_in_list())
+    services = Services()
+    services.print_tasks()
+
+    while True:
+
+        print("Hello! What would you like to do?")
+        print("To show task list type 1")
+        print("To add new task type 2")
+        print("To mark task done type 3")
+        print("To exit type 4")
+
+        command = int(input())
+
+        if command == 4:
+            break
+
+        if command == 1:
+            services.print_tasks()
+
+        if command == 2:
+            name = input("Task name: ")
+            freq = int(input("Frequency in seconds: "))
+
+            services.add_new_task(name, freq)
+
+        if command == 3:
+            name = input("Task name: ")
+
+            services.mark_done(name)
 
 
 if __name__ == "__main__":
