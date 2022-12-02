@@ -6,3 +6,8 @@
 ## Viikko 4
 - Korjattu ongelmat tiedostorakenteessa.
 - Käyttäjä pystyy tarkastelemaan tehtävälistaa, eli näkee ohjelman käynnistyessä kunkin tehtävän nimen ja toistuvuuden sekunneissa.
+
+## Viikko 5
+- Lisätty tehtäviin ajastin.
+- Käyttäjä pystyy lisäämään tehtävän.
+- Käyttäjä pystyy merkkaamaan tehtävän tehdyksi.
