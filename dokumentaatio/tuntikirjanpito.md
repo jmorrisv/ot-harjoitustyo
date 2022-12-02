@@ -11,5 +11,6 @@ Päivä | Tunnit | Mitä tein
 29.11. | 3 | Tein pakkauskaavion loppuun ja päivitin dokumentaation GitHubiin. Aloin testailla ajastimen tekemistä.
 30.11. | 1 | Tein luokan ajastimelle ja aloin liittää sitä sovelluksen muihin osiin.
 1.12. | 0,25 | Tein ajastimelle kaksi ensimmäistä testiä.
+2.12. | 2,5 | Ajastimen testit valmiiksi. Tein ohjelmalle yksinkertaisen komentorivikäyttöliittymän index.py-tiedostoon. Ensimmäinen release. Bugin korjaus tehdyksi merkkaamisessa. 
 
-Yhteensä 24,75 h
+Yhteensä 27,25 h
