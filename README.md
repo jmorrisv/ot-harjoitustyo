@@ -6,6 +6,8 @@ Sovellus auttaa käyttäjäänsä pitämään kotinsa siistinä. Sovelluksen lis
 
 - [Vaatimusmäärittely](https://github.com/jmorrisv/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
 
+- [Arkkitehtuurikuvaus](https://github.com/jmorrisv/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
+
 - [Tuntikirjanpito](https://github.com/jmorrisv/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
 
 - [Changelog](https://github.com/jmorrisv/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)
@@ -45,3 +47,11 @@ poetry run invoke coverage-report
 ```
 
 Löydät tämän jälkeen raportin syntyneestä htmlcov-hakemistosta.
+
+Pylint-tarkistukset voi tehdä komennolla:
+
+```
+poetry run invoke lint
+```
+
+Pylint suorittaa tarkistuksen [tämän](https://github.com/jmorrisv/ot-harjoitustyo/blob/main/.pylintrc) tiedoston mukaisesti.

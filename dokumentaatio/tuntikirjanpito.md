@@ -7,6 +7,9 @@ Päivä | Tunnit | Mitä tein
 22.11. | 3 | Sain tehtyä harjoitustyön tehtävät kolmanteen asti. Yritin suorittaa testiä, mutta se ei onnistunut emmekä saaneet ongelmaa ratkaistua
 23.11. | 2 | Koitettiin ratkoa ongelmia tietokannan luomisessa.
 25.11. | 4 | Sain luokat ja testin jotenkin toimimaan ottamalla kaikki tiedostot src-kansioon. Tein invoke-komennot ja päivitin README-tiedoston.
-28.11. | 2 | Ongelma ratkesi. Tein index.py-tiedoston ja pystyin siirtämään tiedostot takaisin kansioihin. Otin pylintin käyttöön ja korjasin koodin virheet.
+28.11. | 3 | Ongelma ratkesi. Tein index.py-tiedoston ja pystyin siirtämään tiedostot takaisin kansioihin. Otin pylintin käyttöön ja korjasin koodin virheet. Aloitin pakkauskaavion tekemisen.
+29.11. | 3 | Tein pakkauskaavion loppuun ja päivitin dokumentaation GitHubiin. Aloin testailla ajastimen tekemistä.
+30.11. | 1 | Tein luokan ajastimelle ja aloin liittää sitä sovelluksen muihin osiin.
+1.12. | 0,25 | Tein ajastimelle kaksi ensimmäistä testiä.
 
-Yhteensä 20 h
+Yhteensä 24,75 h
