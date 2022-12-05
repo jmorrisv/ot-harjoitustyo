@@ -8,6 +8,8 @@
 - Käyttäjä pystyy tarkastelemaan tehtävälistaa, eli näkee ohjelman käynnistyessä kunkin tehtävän nimen ja toistuvuuden sekunneissa.
 
 ## Viikko 5
-- Lisätty tehtäviin ajastin.
-- Käyttäjä pystyy lisäämään tehtävän.
-- Käyttäjä pystyy merkkaamaan tehtävän tehdyksi.
+- Lisätty Timer-luokka eli ajastin.
+- Luotu ajastimelle testit.
+- Muihin luokkiin tehty ajastinta hyödyntävät funktiot.
+- Käyttäjä pystyy lisäämään tehtävän ja määrittelemään sille nimen sekä toistuvuuden sekunneissa.
+- Käyttäjä pystyy merkkaamaan tehtävän tehdyksi, jolloin aika lähtee alusta.
