@@ -12,6 +12,6 @@ Päivä | Tunnit | Mitä tein
 30.11. | 1 | Tein luokan ajastimelle ja aloin liittää sitä sovelluksen muihin osiin.
 1.12. | 0,25 | Tein ajastimelle kaksi ensimmäistä testiä.
 2.12. | 2,5 | Ajastimen testit valmiiksi. Tein ohjelmalle yksinkertaisen komentorivikäyttöliittymän index.py-tiedostoon. Ensimmäinen release. Bugin korjaus tehdyksi merkkaamisessa. 
-5.12. | 2,5 | Tein sekvenssikaavion uuden tehtävän lisäämisestä. Päivitin ja kirjoitin arkkitehtuurikuvausta. Tein releasen uudelleen, sillä korjasin virheen koodissa ja ohjelmaa on mukavampi käyttää kun se toimii.
+5.12. | 3,5 | Tein sekvenssikaavion uuden tehtävän lisäämisestä. Päivitin ja kirjoitin arkkitehtuurikuvausta. Tein releasen uudelleen, sillä korjasin virheen koodissa ja ohjelmaa on mukavampi käyttää kun se toimii. Tutustuin TkInteriin ja testailin sitä.
 
-Yhteensä 29,75 h
+Yhteensä 30,75 h
