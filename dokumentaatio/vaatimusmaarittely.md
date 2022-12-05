@@ -13,12 +13,12 @@ Sovellus avautuu listanäkymään, joka on tyhjä ennen kuin listaan on lisätty
 ## Perusversion toiminnallisuus
 
 ### Yleisnäkymässä
-- Käyttäjä näkee kaikki tallennetut kohteet.
-- Kohteet, joiden ajastin on kulunut loppuun, ovat likaisia. Niiden kohdalla on merkintä !
-- Käyttäjä voi merkitä minkä tahansa kohteen siivotuksi, jolloin sen ajastin lähtee käyntiin alusta.
+- Käyttäjä näkee kaikki tallennetut kohteet. Tehty
+- Kohteet, joiden ajastin on kulunut loppuun, ovat likaisia. Niiden kohdalla on merkintä ! Tehty
+- Käyttäjä voi merkitä minkä tahansa kohteen siivotuksi, jolloin sen ajastin lähtee käyntiin alusta. Tehty
 
 ### New Task -näkymässä
-- Käyttäjä määrittelee uudelle kohteelle nimen ja toistuvuuden.
+- Käyttäjä määrittelee uudelle kohteelle nimen ja toistuvuuden. Tehty
 - Kohteen voi tallentaa tai poistua näkymästä tallentamatta.
 
 ## Jatkokehitysideoita
