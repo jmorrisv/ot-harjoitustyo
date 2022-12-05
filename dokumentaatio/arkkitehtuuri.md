@@ -23,5 +23,40 @@ Alla oleva pakkauskaavio havainnollistaa visuaalisesti luokkien suhteita.
 
 ## Toiminnallisuus
 
-### Uuden tehtävän lisäys
+### Uuden tehtävän lisääminen
 
+Käyttäjä lisää uuden tehtävän ja syöttää sen tiedot, eli nimen ja toistuvuuden.
+
+```mermaid
+sequenceDiagram
+participant User
+participant Ui
+participant Services
+participant TaskRepository
+participant Timer
+User ->> Ui: Click Add New Task button
+activate Ui
+Ui ->> Services: create_new_task(name, seconds)
+Services ->> TaskRepository: TaskRepository()
+activate Services
+Services ->> Task: Task(name, frequency=timedelta(seconds=seconds))
+activate Task
+Task ->> Timer: Timer(frequency)
+Task -->> Services: task
+deactivate Task
+Services ->> TaskRepository: add_new_task(task)
+activate TaskRepository
+TaskRepository ->> Timer: set()
+activate Timer
+Timer -->> TaskRepository: end_time
+deactivate Timer
+TaskRepository ->> Database: write_new_task(task, frequency, end_time)
+TaskRepository -->> Services: 
+deactivate TaskRepository
+Services -->> Ui: 
+deactivate Services
+deactivate Ui
+```
+
+Käyttöliittymä antaa Services-luokalle tehtävän. Services kutsuu Task-luokkaa muodostaakseen tiedoista olion, ja välittää tämän olion TaskRepository-luokalle, joka
+tallentaa sen tietokantaan.
