@@ -3,16 +3,23 @@ from repositories.task_repository import TaskRepository
 from entities.task import Task
 
 class Services:
+
+    '''Luokka, joka vastaa sovelluksen toimintojen toteuttamisesta.'''
+
     def __init__(self):
 
-        '''Luokka, joka vastaa sovelluksen toimintojen toteuttamisesta'''
+        '''Luokan konstruktori, joka määrittelee tietokannan.'''
 
         self.task_repository = TaskRepository()
 
 
     def get_all_tasks(self):
 
-        '''Palauttaa listan tehtävistä. Likaiset tehtävät ensin, perässään huutomerkki.'''
+        '''Hakee listan tallennetuista tehtävistä ja tiedon niiden likaisuudesta.
+
+        Returns:
+            Tehtävien nimet listana. Likaiset tehtävät ensin, perässään huutomerkki.
+        '''
 
         task_list = []
 
@@ -30,7 +37,12 @@ class Services:
 
     def add_new_task(self, name: str, seconds: float):
 
-        '''Lisää uuden tehtävän'''
+        '''Luo uuden tehtävän ja lisää sen tietokantaan.
+
+        Args:
+            name: Tehtävän nimi merkkijonona.
+            seconds: Tehtävän toistuvuus sekunteina.
+        '''
 
         task = Task(name, timedelta(seconds=seconds))
 
@@ -39,7 +51,7 @@ class Services:
 
     def print_tasks(self):
 
-        '''Tulostaa kaikki tehtävät'''
+        '''Tulostaa kaikki tehtävät.'''
 
         print("Tasks:")
         for task in self.get_all_tasks():
@@ -48,7 +60,11 @@ class Services:
 
     def mark_done(self, task_name: str):
 
-        '''Merkitsee tehtävän siivotuksi ja aloittaa sen ajastimen alusta'''
+        '''Merkitsee tehtävän puhtaaksi ja aloittaa sen ajastimen alusta.
+
+        Args:
+            task_name: Tehtävän nimi merkkijonona.
+        '''
 
         all_tasks = self.task_repository.fetch_all_tasks_in_list()
         time = datetime.now()

@@ -12,7 +12,7 @@ class TestTaskRepository(unittest.TestCase):
 
     def test_create(self):
 
-        "Testaa että uusi tehtävä tulee listalle"
+        "Testaa, että uusi tehtävä tulee listalle."
         
         self.task_repository.write_new_task(self.task)
         tasks = self.task_repository.fetch_all_tasks_in_list()
