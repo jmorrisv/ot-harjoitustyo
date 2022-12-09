@@ -13,3 +13,8 @@
 - Muihin luokkiin tehty ajastinta hyödyntävät funktiot.
 - Käyttäjä pystyy lisäämään tehtävän ja määrittelemään sille nimen sekä toistuvuuden sekunneissa.
 - Käyttäjä pystyy merkkaamaan tehtävän tehdyksi, jolloin aika lähtee alusta.
+
+## Viikko 6
+- Ohjelmalle on luotu graafinen käyttöliittymä.
+- Käyttäjä voi liikkua tehtävälista- ja tehtävien lisäys -näkymien välillä.
+- Käyttäjä voi tallentaa tehtäviä graafisessa käyttöliittymässä.
