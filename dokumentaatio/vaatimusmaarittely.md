@@ -19,7 +19,7 @@ Sovellus avautuu listanäkymään, joka on tyhjä ennen kuin listaan on lisätty
 
 ### New Task -näkymässä
 - Käyttäjä määrittelee uudelle kohteelle nimen ja toistuvuuden. Tehty
-- Kohteen voi tallentaa tai poistua näkymästä tallentamatta.
+- Kohteen voi tallentaa tai poistua näkymästä tallentamatta. Tehty
 
 ## Jatkokehitysideoita
 - Sovellus näyttää kunkin kohteen kohdalla ajan seuraavaan siivouskertaan.
