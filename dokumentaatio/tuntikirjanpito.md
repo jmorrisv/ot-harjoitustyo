@@ -14,6 +14,6 @@ Päivä | Tunnit | Mitä tein
 2.12. | 2,5 | Ajastimen testit valmiiksi. Tein ohjelmalle yksinkertaisen komentorivikäyttöliittymän index.py-tiedostoon. Ensimmäinen release. Bugin korjaus tehdyksi merkkaamisessa. 
 5.12. | 3,5 | Tein sekvenssikaavion uuden tehtävän lisäämisestä. Päivitin ja kirjoitin arkkitehtuurikuvausta. Tein releasen uudelleen, sillä korjasin virheen koodissa ja ohjelmaa on mukavampi käyttää kun se toimii. Tutustuin TkInteriin ja testailin sitä.
 9.12. | 3 | Tein ohjelman graafisesta käyttöliittymästä jonkinlaisen version.
-12.12 | 2 | Lisäsin käyttöliittymään mahdollisuuden merkitä tehtävä tehdyksi, sekä pysyväistallennuksen.
+12.12 | 2,5 | Lisäsin käyttöliittymään mahdollisuuden merkitä tehtävä tehdyksi, sekä pysyväistallennuksen. Tein testejä repository- ja services-luokille.
 
-Yhteensä 35,75 h
+Yhteensä 36,25 h
