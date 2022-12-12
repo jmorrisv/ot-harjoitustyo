@@ -18,3 +18,5 @@
 - Ohjelmalle on luotu graafinen käyttöliittymä.
 - Käyttäjä voi liikkua tehtävälista- ja tehtävien lisäys -näkymien välillä.
 - Käyttäjä voi tallentaa tehtäviä graafisessa käyttöliittymässä.
+- Käyttäjä voi merkitä graafisessa käyttöliittymässä tehtävän tehdyksi.
+- Lisätty tietojen pysyväistallennus.
