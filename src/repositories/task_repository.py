@@ -37,7 +37,8 @@ class TaskRepository:
         end_time = task.timer.set(start_time)
 
         cursor = self.connection.cursor()
-        cursor.execute("INSERT INTO tasks (name, frequency_s, end_time) VALUES (?, ?, ?)", (name, freq_s, end_time))
+        cursor.execute("INSERT INTO tasks (name, frequency_s, end_time) VALUES (?, ?, ?)", (name, freq_s, end_time, ))
+        self.connection.commit()
 
 
     def fetch_all_tasks_in_list(self):

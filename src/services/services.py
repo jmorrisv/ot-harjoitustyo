@@ -27,10 +27,10 @@ class Services:
         clean_tasks_list = self.task_repository.fetch_clean_tasks_in_list()
 
         for task in dirty_tasks_list:
-            task_list.append(f"{task.name} !")
+            task_list.append(task.name + " !")
 
         for task in clean_tasks_list:
-            task_list.append(f"{task.name}")
+            task_list.append(task.name)
 
         return task_list
 

@@ -12,6 +12,7 @@ class TasksView:
         Args:
             root: Ikkuna, johon näkymä avautuu.
             handle_new_task: Add new task -nappulaan liittyvä komento.
+            services: Sovelluksen toiminnallisuus.
         '''
 
         self._root = root
@@ -57,10 +58,15 @@ class TasksView:
         for task in tasks:
             i += 1
             task_label = ttk.Label(master=self._frame, text=[task])
-            task_button = ttk.Button(master=self._frame, text="Done", command=self._handle_done_button)
+            ttk.Button(master=self._frame, text="Done", command=lambda s=task: self._handle_done_button(s)).grid(column=1, row=i)
             task_label.grid(column=0, row=i)
-            task_button.grid(column=1, row=i)
+  
 
+    def _handle_done_button(self, task):
+        task = task.replace(" !", "")
+        print(task)
+        self._services.mark_done(task)
 
-    def _handle_done_button(self, task_button):
-        task_row = task_button.grid_info()['row']
+        self.destroy()
+        self._initialize()
+        self.pack()

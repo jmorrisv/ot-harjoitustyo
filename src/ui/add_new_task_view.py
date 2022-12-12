@@ -1,5 +1,6 @@
 from tkinter import ttk, constants
 from services.services import Services
+from ui.tasks_view import TasksView
 
 class AddNewTaskView:
 
@@ -12,6 +13,7 @@ class AddNewTaskView:
         Args:
             root: Ikkuna, johon näkymä avautuu.
             handle_save: Save-nappulaan liittyvä komento.
+            services: Sovelluksen toiminnallisuus.
         '''
 
         self._root = root
@@ -37,8 +39,6 @@ class AddNewTaskView:
 
     def _initialize(self):
 
-        '''Määrittelee ikkunassa näytettävät komponentit.'''
-
         self._frame = ttk.Frame(master=self._root)
         label = ttk.Label(master=self._frame, text="New task")
 
@@ -63,8 +63,6 @@ class AddNewTaskView:
 
 
     def _handle_save_button_click(self):
-
-        '''Tallentaa tehtävän, kun Save-nappia painetaan.'''
         
         name = self.name_entry.get()
         seconds = float(self.seconds_entry.get())

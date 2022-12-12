@@ -35,16 +35,12 @@ class UI:
 
     def _show_tasks_view(self):
 
-        '''Näyttää tehtävälistanäkymän.'''
-
         self._current_view = TasksView(self._root, self._handle_add_new_task, self.services)
 
         self._current_view.pack()
 
 
     def _show_add_new_task_view(self):
-
-        '''Näyttää tehtävän lisäys -näkymän.'''
 
         self._current_view = AddNewTaskView(self._root, self._handle_close, self.services)
 
@@ -53,15 +49,11 @@ class UI:
     
     def _handle_add_new_task(self):
 
-        '''Siirtyy tehtävän lisäys -näkymään.'''
-
         self._clear_window()
         self._show_add_new_task_view()
 
 
     def _handle_close(self):
-
-        '''Tallentaa tehtävän ja siirtyy takaisin tehtävälistanäkymään.'''
 
         self._clear_window()
         self._show_tasks_view()
