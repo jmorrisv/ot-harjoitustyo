@@ -31,7 +31,13 @@ Käyttöliittymässä on kaksi eri näkymää:
 
 Sovellus avautuu tehtävälistanäkymään, josta pääsee uuden tehtävän lisäysnäkymään nappia painamalla. Molemmat näkymät on toteutettu omassa luokassaan. Lisäksi ui-hakemistosta löytyy luokka UI, joka vastaa näkymien näyttämisestä ja vaihtamisesta.
 
+## Tietojen pysyväistallennus
+
+Tietojen tallennus on toteutettu Repository-mallilla. TaskRepository-luokka tallentaa tiedot SQLite-tietokantaan. Tiedot tallentuvat data.sqlite-nimiseen tiedostoon. Tiedoston nimi on määritelty database_connection.py-tiedostossa. Tietokantataulu on määritelty initialize_db.py-tiedostossa. Taulun nimeksi tulee tasks, ja siinä on sarakkeet name (tehtävän nimi), frequency_s (toistuvuus) ja end_time (ajastimen päättymisaika).
+
 ## Toiminnallisuus
+
+Ohessa on kuvattu pari ohjeman perustoiminnallisuutta sekvenssikaavioina.
 
 ### Uuden tehtävän lisääminen
 
@@ -70,3 +76,5 @@ deactivate Ui
 
 Käyttöliittymä antaa Services-luokalle tehtävän. Services kutsuu Task-luokkaa muodostaakseen tiedoista olion, ja välittää tämän olion TaskRepository-luokalle, joka
 tallentaa sen tietokantaan.
+
+### Tehtävän merkitseminen tehdyksi
