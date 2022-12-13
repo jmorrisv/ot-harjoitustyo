@@ -28,6 +28,8 @@ Tallenna tehtävä painamalla Save-nappia. Voit lisätä kerralla useita tehtäv
 
 Tehtävälistalle lisätyt tehtävät näkyvät nyt aloitusnäkymässä. Kun kohde on aika siivota, se näkyy listassa ensimmäisenä, perässäään huutomerkki. Tartu imuriin, moppiin tai rättiin ja käy hommiin. Kun olet valmis, voit hyvällä omallatunnolla painaa Clean-nappulaa kohteen vieressä, jolloin huutomerkki poistuu.
 
+(Kuva likaisesta ja puhtaasta kohteesta listalla)
+
 Voit siivota kohteen myös ennen, kuin huutomerkki ilmestyy. Tällöinkin Clean-nappulan painaminen asettaa kohteen ajastimen lähtemään alusta.
 
 Huomaa, että sovellus ei päivity itsestään silloin, kun se on tehtävänäkymässä. Nähdäksesi ajantasaisen tiedon kohteiden likaisuudesta voit päivittää sovelluksen sulkemalla ja avaamalla sen uudestaan tai käymällä tehtävän lisäysnäkymässä ja palaamalla takaisin.
