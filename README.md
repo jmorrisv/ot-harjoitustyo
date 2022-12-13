@@ -4,6 +4,8 @@ Sovellus auttaa käyttäjäänsä pitämään kotinsa siistinä. Sovelluksen lis
 
 ## Dokumentaatio
 
+- [Käyttöohje](https://github.com/jmorrisv/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)
+
 - [Vaatimusmäärittely](https://github.com/jmorrisv/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
 
 - [Arkkitehtuurikuvaus](https://github.com/jmorrisv/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
