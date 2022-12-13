@@ -2,15 +2,37 @@ from datetime import datetime, timedelta
 from repositories.task_repository import TaskRepository
 from entities.task import Task
 
+class InvalidNameError(Exception):
+    pass
+
+class InvalidFrequencyError(Exception):
+    pass
+
 class Services:
 
     '''Luokka, joka vastaa sovelluksen toimintojen toteuttamisesta.'''
 
     def __init__(self):
 
-        '''Luokan konstruktori, joka määrittelee tietokannan.'''
+        '''Luokan konstruktori, joka määrittelee tietokantaa käyttävän luokan.'''
 
         self.task_repository = TaskRepository()
+
+
+    def _invalid_name(self, name):
+        if len(name) <= 0 or name[-1] == "!":
+            return False
+        return True
+
+    def _check_freq(self, days, seconds):
+        if days != float(days) or seconds != float(seconds):
+            return False
+        if days < 0 or seconds < 0:
+            return False
+        if days == 0:
+            if seconds == 0:
+                return False
+        return True
 
 
     def get_all_tasks(self):
@@ -35,27 +57,31 @@ class Services:
         return task_list
 
 
-    def add_new_task(self, name: str, seconds: float):
+    def add_new_task(self, name: str="No name", days: float=0, seconds: float=0):
 
         '''Luo uuden tehtävän ja lisää sen tietokantaan.
 
         Args:
             name: Tehtävän nimi merkkijonona.
+            days: Tehtävän toistuvuus päivinä.
             seconds: Tehtävän toistuvuus sekunteina.
+
+        Raises:
+            InvalidNameError: Jos tehtävälle ei anneta nimeä, tai nimi loppuu merkkiin '!'
+            InvalidFrequencyError: Jos toistuvuus on määritelty virheellisesti.
         '''
 
-        task = Task(name, timedelta(seconds=seconds))
+        if not self._invalid_name(name):
+            raise InvalidNameError("Plese give your task a name. Last caharacter can't be '!'!")
+
+        if not self._check_freq(days, seconds):
+            raise InvalidFrequencyError(
+                "Days or seconds must be numbers, at least one of them over 0."
+                )
+
+        task = Task(name, timedelta(days=days, seconds=seconds))
 
         self.task_repository.write_new_task(task)
-
-
-    def print_tasks(self):
-
-        '''Tulostaa kaikki tehtävät.'''
-
-        print("Tasks:")
-        for task in self.get_all_tasks():
-            print(task)
 
 
     def mark_done(self, task_name: str):

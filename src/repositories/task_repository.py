@@ -32,12 +32,15 @@ class TaskRepository:
         '''
 
         name = task.name
+        freq_d = task.frequency.days
         freq_s = task.frequency.seconds
         start_time = datetime.datetime.now()
         end_time = task.timer.set(start_time)
 
         cursor = self.connection.cursor()
-        cursor.execute("INSERT INTO tasks (name, frequency_s, end_time) VALUES (?, ?, ?)", (name, freq_s, end_time, ))
+        cursor.execute(
+            "INSERT INTO tasks (name, frequency_d, frequency_s, end_time) VALUES (?, ?, ?, ?)",
+            (name, freq_d, freq_s, end_time, ))
         self.connection.commit()
 
 
@@ -56,9 +59,10 @@ class TaskRepository:
 
         for row in rows:
             name = row[0]
-            freq_s = float(row[1])
+            freq_d = float(row[1])
+            freq_s = float(row[2])
 
-            task = Task(name, datetime.timedelta(seconds=freq_s))
+            task = Task(name, datetime.timedelta(days=freq_d, seconds=freq_s))
             tasks.append(task)
 
         return tasks
@@ -79,10 +83,11 @@ class TaskRepository:
 
         for row in rows:
             name = row[0]
-            freq_s = float(row[1])
-            end_time = datetime.datetime.strptime(row[2], '%Y-%m-%d %H:%M:%S.%f')
+            freq_d = float(row[1])
+            freq_s = float(row[2])
+            end_time = datetime.datetime.strptime(row[3], '%Y-%m-%d %H:%M:%S.%f')
 
-            task = Task(name, datetime.timedelta(seconds=freq_s))
+            task = Task(name, datetime.timedelta(days=freq_d, seconds=freq_s))
             clean_or_not = task.timer.timer(end_time)
 
             if not clean_or_not:
@@ -106,10 +111,12 @@ class TaskRepository:
 
         for row in rows:
             name = row[0]
-            freq_s = float(row[1])
-            end_time = datetime.datetime.strptime(row[2], '%Y-%m-%d %H:%M:%S.%f')
+            freq_d = float(row[1])
+            freq_s = float(row[2])
+            end_time = datetime.datetime.strptime(row[3], '%Y-%m-%d %H:%M:%S.%f')
 
-            task = Task(name, datetime.timedelta(seconds=freq_s))
+
+            task = Task(name, datetime.timedelta(days=freq_d, seconds=freq_s))
             clean_or_not = task.timer.timer(end_time)
 
             if clean_or_not:

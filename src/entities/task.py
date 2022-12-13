@@ -4,7 +4,7 @@ from entities.timer import Timer
 class Task:
 
     '''Tehtävistä vastaava luokka.
-    
+
     Attributes:
         name: Tehtävän nimi.
         frequency: Tehtävän toistuvuus.
@@ -13,7 +13,7 @@ class Task:
     def __init__(self, name: str, frequency: datetime.timedelta):
 
         '''Luokan konstruktori, joka luo uuden tehtävän.
-        
+
         Args:
             name: Tehtävän nimi.
             frequency: Tehtävän toistuvuus.
@@ -26,7 +26,7 @@ class Task:
     def __str__(self) -> str:
 
         ''' Esittää tehtävän tiedot merkkijonona.
-        
+
         Returns:
             Merkkijono, joka kertoo tehtävän nimen ja toistuvuuden sekunneissa.
         '''

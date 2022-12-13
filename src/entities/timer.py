@@ -13,7 +13,7 @@ class Timer:
         '''Luokan konstruktori, joka luo uuden ajastimen.
 
         Args:
-            frequency: Tehtävän toistuvuus.   
+            frequency: Tehtävän toistuvuus.
         '''
 
         self.freq = frequency
