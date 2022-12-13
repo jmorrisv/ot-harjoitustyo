@@ -36,7 +36,7 @@ participant TaskRepository
 participant Timer
 User ->> Ui: Click Add New Task button
 activate Ui
-Ui ->> Services: create_new_task(name, seconds)
+Ui ->> Services: add_new_task(name, seconds)
 activate Services
 Services ->> TaskRepository: TaskRepository()
 Services ->> Task: Task(name, frequency=timedelta(seconds=seconds))
