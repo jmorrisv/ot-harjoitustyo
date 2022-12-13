@@ -20,3 +20,4 @@
 - Käyttäjä voi tallentaa tehtäviä graafisessa käyttöliittymässä.
 - Käyttäjä voi merkitä graafisessa käyttöliittymässä tehtävän tehdyksi.
 - Lisätty tietojen pysyväistallennus.
+- Tehty käyttöohje ja päivitetty arkkitehtuurikuvaus.
