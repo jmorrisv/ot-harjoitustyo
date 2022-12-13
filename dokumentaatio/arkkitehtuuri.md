@@ -21,6 +21,16 @@ Alla oleva pakkauskaavio havainnollistaa visuaalisesti luokkien suhteita.
 
 ![download](https://user-images.githubusercontent.com/117164741/205582043-65f0893c-3fbd-4b74-8052-98ddc0d4c3ff.png)
 
+## Käyttöliittymä
+
+Sovelluksen käyttöliittymä on eriytetty sovelluslogiikasta mahdollisimman hyvin. Se on yhteydessä ohjelman toiminnallisuuteen services-luokan metodien kautta. 
+
+Käyttöliittymässä on kaksi eri näkymää:
+- Tehtävälistanäkymä ja
+- Uuden tehtävän lisäysnäkymä.
+
+Sovellus avautuu tehtävälistanäkymään, josta pääsee uuden tehtävän lisäysnäkymään nappia painamalla. Molemmat näkymät on toteutettu omassa luokassaan. Lisäksi ui-hakemistosta löytyy luokka UI, joka vastaa näkymien näyttämisestä ja vaihtamisesta.
+
 ## Toiminnallisuus
 
 ### Uuden tehtävän lisääminen
