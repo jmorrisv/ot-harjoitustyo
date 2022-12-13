@@ -22,3 +22,4 @@
 - Ajan voi määritellä myös päivissä eikä vain sekunneissa.
 - Lisätty tietojen pysyväistallennus.
 - Tehty käyttöohje ja päivitetty arkkitehtuurikuvaus.
+- Testikattavuutta parannettu.
