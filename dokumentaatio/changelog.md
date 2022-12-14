@@ -21,5 +21,8 @@
 - Käyttäjä voi merkitä graafisessa käyttöliittymässä tehtävän tehdyksi.
 - Ajan voi määritellä myös päivissä eikä vain sekunneissa.
 - Lisätty tietojen pysyväistallennus.
+- Lisätty virheilmoitukset, jos käyttäjä yrittää antaa virheellisiä syötteitä.
 - Tehty käyttöohje ja päivitetty arkkitehtuurikuvaus.
 - Testikattavuutta parannettu.
+
+## Viikko 7
