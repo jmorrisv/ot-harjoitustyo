@@ -26,3 +26,4 @@
 - Testikattavuutta parannettu.
 
 ## Viikko 7
+- Lisätty käyttäjälle mahdollisuus poistaa tehtävä.
