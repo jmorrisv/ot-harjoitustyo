@@ -15,6 +15,7 @@ Päivä | Tunnit | Mitä tein
 5.12. | 3,5 | Tein sekvenssikaavion uuden tehtävän lisäämisestä. Päivitin ja kirjoitin arkkitehtuurikuvausta. Tein releasen uudelleen, sillä korjasin virheen koodissa ja ohjelmaa on mukavampi käyttää kun se toimii. Tutustuin TkInteriin ja testailin sitä.
 9.12. | 3 | Tein ohjelman graafisesta käyttöliittymästä jonkinlaisen version.
 12.12 | 2,5 | Lisäsin käyttöliittymään mahdollisuuden merkitä tehtävä tehdyksi, sekä pysyväistallennuksen. Tein testejä repository- ja services-luokille.
-13.12. | 4,5 | Lisäsin sovellukseen mahdollisuuden määritellä aika päivissä eikä vain sekunneissa. Kirjoitin käyttöohjeen ja lisäsin arkkitehtuuridokumenttiin toisen sekvenssikaavion. Lisäsin virheilmoitukset uuden tehtävän lisäykseen. Tein viikon 6 releasen. Koodasin vielä mahdollisuuden poistaa tehtävä listalta, mutta se ie kerennyt releaseen.
+13.12. | 4,5 | Lisäsin sovellukseen mahdollisuuden määritellä aika päivissä eikä vain sekunneissa. Kirjoitin käyttöohjeen ja lisäsin arkkitehtuuridokumenttiin toisen sekvenssikaavion. Lisäsin virheilmoitukset uuden tehtävän lisäykseen. Tein viikon 6 releasen. Koodasin vielä mahdollisuuden poistaa tehtävä listalta.
+14.12. | 2,25 | Tutustuin loppupalautuksen ohjeisiin, leikin käyttöliittymän ulkoasun kanssa ja tein testit virheilmoituksille.
 
-Yhteensä 40,75 h
+Yhteensä 43 h
