@@ -12,16 +12,16 @@ Sovellus avautuu listanäkymään, joka on tyhjä ennen kuin listaan on lisätty
 
 ## Perusversion toiminnallisuus
 
-### Yleisnäkymässä
-- Käyttäjä näkee kaikki tallennetut kohteet. Tehty
-- Kohteet, joiden ajastin on kulunut loppuun, ovat likaisia. Niiden kohdalla on merkintä ! Tehty
-- Käyttäjä voi merkitä minkä tahansa kohteen siivotuksi, jolloin sen ajastin lähtee käyntiin alusta. Tehty
+### Tehtävälistanäkymässä
+- Käyttäjä näkee kaikki tallennetut kohteet. *Tehty*
+- Kohteet, joiden ajastin on kulunut loppuun, ovat likaisia. Niiden kohdalla on merkintä ! *Tehty*
+- Käyttäjä voi merkitä minkä tahansa kohteen siivotuksi, jolloin sen ajastin lähtee käyntiin alusta. *Tehty*
 
-### New Task -näkymässä
-- Käyttäjä määrittelee uudelle kohteelle nimen ja toistuvuuden. Tehty
-- Kohteen voi tallentaa tai poistua näkymästä tallentamatta. Tehty
+### Add new task -näkymässä
+- Käyttäjä määrittelee uudelle kohteelle nimen ja toistuvuuden. *Tehty*
+- Kohteen voi tallentaa tai poistua näkymästä tallentamatta. *Tehty*
 
 ## Jatkokehitysideoita
 - Sovellus näyttää kunkin kohteen kohdalla ajan seuraavaan siivouskertaan.
-- Kohteen voi poistaa.
+- Kohteen voi poistaa. *Tehty*
 - Kohteita voi ryhmitellä esim. huoneen mukaan.
