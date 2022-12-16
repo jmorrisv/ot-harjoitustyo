@@ -22,6 +22,6 @@ Sovellus avautuu listanäkymään, joka on tyhjä ennen kuin listaan on lisätty
 - Kohteen voi tallentaa tai poistua näkymästä tallentamatta. *Tehty*
 
 ## Jatkokehitysideoita
-- Sovellus näyttää kunkin kohteen kohdalla ajan seuraavaan siivouskertaan.
+- Sovellus näyttää kunkin kohteen kohdalla ajan seuraavaan siivouskertaan. *Tehty, ajan saa näkyviin Info-napista.*
 - Kohteen voi poistaa. *Tehty*
 - Kohteita voi ryhmitellä esim. huoneen mukaan.
