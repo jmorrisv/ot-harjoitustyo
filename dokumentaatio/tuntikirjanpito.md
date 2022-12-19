@@ -18,5 +18,6 @@ Päivä | Tunnit | Mitä tein
 13.12. | 4,5 | Lisäsin sovellukseen mahdollisuuden määritellä aika päivissä eikä vain sekunneissa. Kirjoitin käyttöohjeen ja lisäsin arkkitehtuuridokumenttiin toisen sekvenssikaavion. Lisäsin virheilmoitukset uuden tehtävän lisäykseen. Tein viikon 6 releasen. Koodasin vielä mahdollisuuden poistaa tehtävä listalta.
 14.12. | 2,25 | Tutustuin loppupalautuksen ohjeisiin, leikin käyttöliittymän ulkoasun kanssa ja tein testit virheilmoituksille.
 16.12. | 2,5 | Testailin parasta keinoa nähdä kuinka paljon aikaa kussain kohteessa on jäljellä. Päädyin lisäämään tehtäviin info-nappulat, joista näkee kunkin kohteen nimen, toistuvuuden, seuraavan siivousajan ja kuinka paljon siihen on aikaa.
+19.12. | 3 | Testaamista, testausdokumentti, viimeistelyä ja loppupalautus.
 
-Yhteensä 45,5 h
+Yhteensä 48,5 h
