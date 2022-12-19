@@ -19,19 +19,29 @@ class Services:
         self.task_repository = TaskRepository()
 
 
-    def _invalid_name(self, name):
+    def _check_name(self, name):
         if len(name) <= 0 or name[-1] == "!":
+            return False
+        task_name_list = []
+        for task in self.task_repository.fetch_all_tasks_in_list():
+            task_name_list.append(task.name)
+        if name in task_name_list:
             return False
         return True
 
-    def _check_freq(self, days, seconds):
-        if days != float(days) or seconds != float(seconds):
+
+    def _check_freq(self, months, weeks, days, seconds):
+        try:
+            months = float(months)
+            weeks = float(weeks)
+            days = float(days)
+            seconds = float(seconds)
+        except ValueError:
             return False
-        if days < 0 or seconds < 0:
+        if months < 0 or weeks <0 or days < 0 or seconds < 0:
             return False
-        if days == 0:
-            if seconds == 0:
-                return False
+        if months == 0 and weeks == 0 and days == 0 and seconds == 0:
+            return False
         return True
 
 
@@ -57,31 +67,64 @@ class Services:
         return task_list
 
 
-    def add_new_task(self, name: str="No name", days: float=0, seconds: float=0):
+    def add_new_task(
+        self, name: str="No name",months: float=0, weeks: float=0, days: float=0, seconds: float=0
+        ):
 
         '''Luo uuden tehtävän ja lisää sen tietokantaan.
 
         Args:
             name: Tehtävän nimi merkkijonona.
+            months: Tehtävän toistuvuus kuukausina.
+            weeks: Tehtävän toistuvuus viikkoina.
             days: Tehtävän toistuvuus päivinä.
             seconds: Tehtävän toistuvuus sekunteina.
 
         Raises:
-            InvalidNameError: Jos tehtävälle ei anneta nimeä, tai nimi loppuu merkkiin '!'
+            InvalidNameError: Jos tehtävälle ei anneta nimeä,nimi on jo listalla
+                tai se loppuu merkkiin '!'
             InvalidFrequencyError: Jos toistuvuus on määritelty virheellisesti.
         '''
 
-        if not self._invalid_name(name):
-            raise InvalidNameError("Plese give your task a name. Last caharacter can't be '!'!")
-
-        if not self._check_freq(days, seconds):
-            raise InvalidFrequencyError(
-                "Days or seconds must be numbers, at least one of them over 0."
+        if not self._check_name(name):
+            raise InvalidNameError(
+                '''Please give your task a name. Check that it's not already on the list.
+                Also note that the last character can't be '!'!'''
                 )
+
+        if not self._check_freq(months, weeks, days, seconds):
+            raise InvalidFrequencyError(
+                "Frequency values must be numbers, at least one of them over 0."
+                )
+
+        days += (months*30)+(weeks*7)
 
         task = Task(name, timedelta(days=days, seconds=seconds))
 
         self.task_repository.write_new_task(task)
+
+
+    def show_task(self, task_name: str):
+
+        '''Näyttää yksittäisen tehtävän tiedot.
+
+        Args:
+            task_name: Tehtävän nimi merkkijonona.
+
+        Returns:
+            Tehtävän nimi, toistuvuus, päättymisaika ja jäljellä oleva aika
+            nelirivisenä merkkijonona.
+        '''
+
+        task_info = self.task_repository.fetch_one_task(task_name)
+        name = task_info[0]
+        frequency = task_info[1]
+        end_time = task_info[2]
+        remaining_time = end_time - datetime.now()
+        if remaining_time <= timedelta(days=0, seconds=0):
+            remaining_time = 0
+
+        return f"{name}\n\nFrequency: {frequency}\n\nDue: {end_time}\n\nTime remaining: {remaining_time}"
 
 
     def mark_done(self, task_name: str):
@@ -102,3 +145,14 @@ class Services:
                 task.timer.set(time)
 
                 self.task_repository.write_new_task(task)
+
+
+    def delete_task(self, task_name: str):
+
+        '''Poistaa tehtävän tietokannasta.
+
+        Args:
+            task_name: Tehtävän nimi merkkijonona.
+        '''
+
+        self.task_repository.delete_task_permanently(task_name)

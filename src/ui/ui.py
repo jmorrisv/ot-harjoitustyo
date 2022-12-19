@@ -1,4 +1,4 @@
-from tkinter import Tk
+from tkinter import font
 from ui.tasks_view import TasksView
 from ui.add_new_task_view import AddNewTaskView
 from services.services import Services
@@ -17,6 +17,9 @@ class UI:
         self._root = root
         self._current_view = None
         self.services = Services()
+
+        self.default_font = font.nametofont("TkDefaultFont")
+        self.default_font.configure(family="courier new", size=15)
 
 
     def start(self):
@@ -46,7 +49,7 @@ class UI:
 
         self._current_view.pack()
 
-    
+
     def _handle_add_new_task(self):
 
         self._clear_window()

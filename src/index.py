@@ -3,14 +3,14 @@ from ui.ui import UI
 
 def main():
 
-    '''Suorittaa ohjelman'''
+    '''Suorittaa ohjelman.'''
 
     window = Tk()
     window.title("Siivousapuri")
-    window.geometry("400x400")
+    window.geometry("500x500")
 
-    ui = UI(window)
-    ui.start()
+    u_i = UI(window)
+    u_i.start()
 
     window.mainloop()
 

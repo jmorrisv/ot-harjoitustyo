@@ -44,12 +44,35 @@ class TaskRepository:
         self.connection.commit()
 
 
+    def fetch_one_task(self, task_name):
+
+        '''Etsii tietyn tehtävän tietokannasta.
+
+        Args:
+            task_name: Tehtävän nimi merkkijonona.
+        Returns:
+            Tehtävän nimi, toistuvuus ja päättymisaika tuplena.
+        '''
+
+        cursor = self.connection.cursor()
+        row = cursor.execute("SELECT * FROM tasks WHERE name = ?", (task_name, )).fetchone()
+
+        name = row[0]
+        freq_d = float(row[1])
+        freq_s = float(row[2])
+        frequency = datetime.timedelta(days=freq_d, seconds=freq_s)
+
+        end_time = datetime.datetime.strptime(row[3], '%Y-%m-%d %H:%M:%S.%f')
+
+        return (name, frequency, end_time)
+
+
     def fetch_all_tasks_in_list(self):
 
         '''Hakee tallennetut tehtävät listana.
 
         Returns:
-            Kaikki tehtävät listana.
+            Kaikki tehtävät listana Task-olioita.
         '''
 
         tasks = []
@@ -73,7 +96,7 @@ class TaskRepository:
         '''Hakee listan likaisista kohteista.
 
         Returns:
-            Tehtävät, joiden aika on kulunut umpeen, listana.
+            Tehtävät, joiden aika on kulunut umpeen, listana Task-olioita.
         '''
 
         dirty_tasks = []
@@ -98,10 +121,10 @@ class TaskRepository:
 
     def fetch_clean_tasks_in_list(self):
 
-        '''Hakee listan likaisista kohteista.
+        '''Hakee listan puhtaista kohteista.
 
         Returns:
-            Tehtävät, joissa on kyselyhetkellä aikaa jäljellä, listana.
+            Tehtävät, joissa on kyselyhetkellä aikaa jäljellä, listana Task-olioita.
         '''
 
         clean_tasks = []
@@ -127,7 +150,7 @@ class TaskRepository:
 
     def delete_task(self, task_name: str):
 
-        '''Poistaa tehtävän tietokannasta.
+        '''Poistaa tehtävän tietokannasta väliaikaisesti.
 
         Args:
             task_name: Tehtävän nimi merkkijonona.
@@ -135,3 +158,16 @@ class TaskRepository:
 
         cursor = self.connection.cursor()
         cursor.execute("DELETE FROM tasks WHERE name = ?", (task_name, ))
+
+
+    def delete_task_permanently(self, task_name:str):
+
+        '''Poistaa tehtävän tietokannasta pysyvästi.
+
+        Args:
+            task_name: Tehtävän nimi merkkijonona.
+        '''
+
+        cursor = self.connection.cursor()
+        cursor.execute("DELETE FROM tasks WHERE name = ?", (task_name, ))
+        self.connection.commit()

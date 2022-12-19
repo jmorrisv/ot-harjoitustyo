@@ -1,4 +1,4 @@
-from tkinter import ttk, constants
+from tkinter import ttk, constants, messagebox
 from services.services import Services
 
 class TasksView:
@@ -27,7 +27,7 @@ class TasksView:
 
         '''Näyttää kaikki näkymän komponentit ikkunassa.'''
 
-        self._frame.pack(fill=constants.BOTH)
+        self._frame.pack(fill=constants.BOTH, padx=10, pady=10)
 
     
     def destroy(self):
@@ -41,11 +41,19 @@ class TasksView:
 
         '''Määrittelee ikkunassa näytettävät komponentit.'''
 
+        heading_font = ("courier new", 20)
+        
         self._frame = ttk.Frame(master=self._root)
-        label = ttk.Label(master=self._frame, text="Tasks:", font=("Arial", 15))
-        add_new_task_button = ttk.Button(master=self._frame,
-                                        text="Add new task",
-                                        command=self._handle_new_task)
+        label = ttk.Label(
+            master=self._frame,
+            text="Tasks:",
+            font=heading_font,
+            )
+        add_new_task_button = ttk.Button(
+            master=self._frame,
+            text="Add new task",
+            command=self._handle_new_task,
+            )
 
         label.grid(column=0, row=0, padx=5, pady=10)
         self._print_tasks()
@@ -57,18 +65,44 @@ class TasksView:
         i = 0
         for task in tasks:
             i += 1
-            task_label = ttk.Label(master=self._frame, text=[task])
+            ttk.Label(master=self._frame, text=task
+                ).grid(column=0, row=i, padx=5, pady=5)
             ttk.Button(
                 master=self._frame,
                 text="Clean",
-                command=lambda s=task: self._handle_done_button(s)
+                command=lambda s=task: self._handle_done_button(s),
                 ).grid(column=1, row=i)
-            task_label.grid(column=0, row=i, padx=5, pady=5)
-  
+            ttk.Button(
+                master=self._frame,
+                text="Info",
+                command=lambda s=task: self._handle_info_button(s),
+                ).grid(column=2, row=i)
+            ttk.Button(
+                master=self._frame,
+                text="Delete",
+                command=lambda s=task: self._handle_delete_button(s)
+                ).grid(column=3, row=i)
+
 
     def _handle_done_button(self, task):
         task = task.replace(" !", "")
         self._services.mark_done(task)
+
+        self.destroy()
+        self._initialize()
+        self.pack()
+
+
+    def _handle_info_button(self, task):
+        task = task.replace(" !", "")
+        task_info = self._services.show_task(task)
+
+        messagebox.showinfo(message=task_info)
+
+
+    def _handle_delete_button(self, task):
+        task = task.replace(" !", "")
+        self._services.delete_task(task)
 
         self.destroy()
         self._initialize()
