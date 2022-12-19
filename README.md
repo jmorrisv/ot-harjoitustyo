@@ -20,6 +20,8 @@ Sovellus auttaa käyttäjäänsä pitämään kotinsa siistinä. Sovelluksen lis
 
 - [Viikon 6 release](https://github.com/jmorrisv/ot-harjoitustyo/releases/tag/viikko6)
 
+- [Loppupalautus](https://github.com/jmorrisv/ot-harjoitustyo/releases/tag/loppupalautus)
+
 ## Asennus
 
 Asenna riippuvuudet komennolla:
