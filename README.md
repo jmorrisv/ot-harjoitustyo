@@ -14,6 +14,8 @@ Sovellus auttaa käyttäjäänsä pitämään kotinsa siistinä. Sovelluksen lis
 
 - [Changelog](https://github.com/jmorrisv/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)
 
+- [Testausdokumentti](https://github.com/jmorrisv/ot-harjoitustyo/blob/main/dokumentaatio/testausdokumentti.md)
+
 - [Viikon 5 release](https://github.com/jmorrisv/ot-harjoitustyo/releases/tag/viikko5)
 
 - [Viikon 6 release](https://github.com/jmorrisv/ot-harjoitustyo/releases/tag/viikko6)
