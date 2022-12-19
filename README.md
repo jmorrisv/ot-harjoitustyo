@@ -34,6 +34,12 @@ Alusta ohjelma komennolla:
 poetry run invoke build
 ```
 
+Nyt voit käynnistää ohjelman komennolla:
+
+```
+poetry run invoke start
+```
+
 ## Komentorivikomennot
 
 Ohjelma käynnistyy komennolla:
