@@ -126,3 +126,5 @@ deactivate Ui
 ```
 
 Käyttöliittymä antaa tehtävän Services-luokalle. Services-luokan metodi hakee repositorion kautta tietokannasta listan tehtävistä. Repositorion metodi muuttaa tekstimuodossa olevat tehtävät Task-olioiksi. Services-luokan metodi vertaa tehtävien nimiä sen tehtävän nimeen, jonka kohdalla nappia on painettu. Kun ohjelma löytää listalta oikean nimen, se poistaa tehtävän tietokannasta, hakee tehtävälle uuden päättymisajan ja tallentaa sen uudestaan.
+
+Muut ohjelman toiminnot toimivat samanlaisella periaatteella.
