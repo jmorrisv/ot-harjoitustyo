@@ -2,25 +2,39 @@
 
 ## Asennus
 
+Mene projektin [etusivulle](https://github.com/jmorrisv/ot-harjoitustyo) ja lataa ohjelman uusin versio valitsemalla oikeasta yläkulmasta Code ja Download ZIP.
+
+Asenna riippuvuudet komentoriviltä komennolla:
+
+```poetry install```
+
+Alusta ohjelma komennolla:
+
+```poetry run invoke build```
+
+Nyt voit käynnistää ohjelman komennolla:
+
+```poetry run invoke start```
+
 ## Aloittaminen
 
-Sovelluksen avautuessa näkyviin tulee tehtävälista. Jos käytät sovellusta ensimmäistä kertaa, lista on todennäköisesti tyhjä. Pystyt lisäämään uuden siivottavan kohteen yksinkertaisesti painamalla Add new task -nappulaa.
+Sovelluksen avautuessa näkyviin tulee tehtävälista. Jos käytät sovellusta ensimmäistä kertaa, lista on tyhjä. Pystyt lisäämään uuden siivottavan kohteen yksinkertaisesti painamalla Add new task -nappulaa.
 
-![Aloitus](https://user-images.githubusercontent.com/117164741/207295398-fc9ff230-4bea-49c6-a366-a744520c1d88.JPG)
+![Tasks_new](https://user-images.githubusercontent.com/117164741/208421919-fd5fb194-1e34-4756-b15d-9c653079bc2f.JPG)
 
 ## Uuden tehtävän lisääminen
 
 Add new task -napista painamalla pääset uuden tehtävän lisäysnäkymään.
 
-![AddNewTask](https://user-images.githubusercontent.com/117164741/207295682-e5df9757-7346-4cff-ac72-1b788588efd0.JPG)
+![New_task_new](https://user-images.githubusercontent.com/117164741/208422537-83592eaa-e949-401b-8f8c-fd18f6147106.JPG)
 
 Kirjoita tehtävälle kuvaava nimi name-kenttään. Frequency-kentissä voit määritellä tehtävälle toistuvuuden. Jos kirjoitat esimerkiksi
 
-![TehtävänKirjoitus](https://user-images.githubusercontent.com/117164741/207295966-990e652c-9fe7-4d5a-81d6-2cfb6d6916f4.JPG)
+![Imuroi_new](https://user-images.githubusercontent.com/117164741/208422741-590b560d-9cac-428d-b7ef-866480cb6b29.JPG)
 
 sovellus muistuttaa sinua imuroinnista viikon välein. Vinkkejä siihen, miten usein mikäkin kohde on hyvä siivota, löydät esimerkiksi [Marttaliiton](https://www.martat.fi/marttakoulu/kodinhoito/) sivuilta.
 
-Huom. Mahdollisuus määritellä aika sekunteina on jätetty sovellukseen lähinnä sitä varten, ettei sovelluksen toimintaa testatakseen ole aina pakko odottaa päiviä tai viikkoja.
+Huom. Mahdollisuus määritellä aika sekunteina on jätetty sovellukseen lähinnä sitä varten, ettei sovelluksen toimintaa testatakseen ole aina pakko odottaa päiviä, viikkoja tai kuukausia.
 
 Tallenna tehtävä painamalla Save-nappia. Voit lisätä kerralla useita tehtäviä kirjoittamalla kenttiin uudet tekstit ja painamalla Save. Kun olet valmis, poistu näkymästä painamalla Close.
 
@@ -28,8 +42,18 @@ Tallenna tehtävä painamalla Save-nappia. Voit lisätä kerralla useita tehtäv
 
 Tehtävälistalle lisätyt tehtävät näkyvät nyt aloitusnäkymässä. Kun kohde on aika siivota, se näkyy listassa ensimmäisenä, perässäään huutomerkki. Tartu imuriin, moppiin tai rättiin ja käy hommiin. Kun olet valmis, voit hyvällä omallatunnolla painaa Clean-nappulaa kohteen vieressä, jolloin huutomerkki poistuu.
 
-![KuvaLikaisestaJaPuhtaasta](https://user-images.githubusercontent.com/117164741/207296560-701e33d8-2544-4e46-a7eb-11a97a99d0ee.JPG)
+![List_dirty_and_clean_new](https://user-images.githubusercontent.com/117164741/208423216-3c6eeab0-7587-431c-959f-79fabef8c045.JPG)
 
 Voit siivota kohteen myös ennen, kuin huutomerkki ilmestyy. Tällöinkin Clean-nappulan painaminen asettaa kohteen ajastimen lähtemään alusta.
 
 Huomaa, että sovellus ei päivity itsestään silloin, kun se on tehtävänäkymässä. Nähdäksesi ajantasaisen tiedon kohteiden likaisuudesta voit päivittää sovelluksen sulkemalla ja avaamalla sen uudestaan tai käymällä tehtävän lisäysnäkymässä ja palaamalla takaisin.
+
+## Tehtävän tiedot
+
+Tehtävän vieressä olevaa Info-nappia painamalla saat näkyviin info-ruudun, jossa näkyvät tehtävän tiedot: nimi, toistuvuus, seuraava siivouskerta ja siihen jäljellä oleva aika. Voit poistua näkymästä joko raksista tai Ok-napista.
+
+![Imuroi_info_new](https://user-images.githubusercontent.com/117164741/208423714-dd218868-ea25-47d6-9f6c-2690e2afa214.JPG)
+
+## Tehtävän poistaminen
+
+Tehtävän vieressä olevasta Delete-napista painamalla tehtävä poistuu listasta ja tietokannasta pysyvästi.
