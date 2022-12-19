@@ -28,3 +28,5 @@
 ## Viikko 7
 - Lisätty käyttäjälle mahdollisuus poistaa tehtävä.
 - Lisätty jokaisen tehtävän kohdalle Info-nappula, josta painamalla käyttäjä näkee kohteen tiedot, kuten seuraavan siivousajankohdan ja siihen jäljellä olevan ajan.
+- Dokumentaation viimeistely ja testausdokumentti.
+- Loppupalautus-release.
