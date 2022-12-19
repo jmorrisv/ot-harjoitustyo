@@ -18,7 +18,7 @@ Testikattavuus on 78%. Tärkeimmät kattavuuden ulkopuolelle jääneet asiat ova
 
 ![Testikattavuus221219](https://user-images.githubusercontent.com/117164741/208426748-613f3644-3c47-455a-a6c4-320c6c852c67.JPG)
 
-index.py-tiedosto vastaa lähinnä graafisen käyttöliittymän avaamisesta. Sen olisi kenties voinut jättää myös testauksen ulkopuolelle.
+index.py-tiedosto vastaa graafisen käyttöliittymän avaamisesta. Sen olisi kenties voinut jättää myös testauksen ulkopuolelle.
 
 ## Järjestelmätestaus
 
